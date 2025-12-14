@@ -3,13 +3,46 @@
         const BOT_TOKEN = '8010864557:AAG1JiG6sj80hVxdmxVGKcKaqrg1dmh6WK8';
         const CHAT_ID = '1667587449'; // Your Telegram user ID
         
+        // Create animated particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random properties
+                const size = Math.random() * 10 + 2;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const opacity = Math.random() * 0.3 + 0.1;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 5;
+                const color = Math.random() > 0.5 ? 'var(--primary)' : 'var(--secondary)';
+                
+                // Apply styles
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.background = color;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
         // Loading screen
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loading').classList.add('hidden');
+                createParticles();
             }, 800);
         });
-
+        
         // Modern Typing Animation
         class TypeWriter {
             constructor(element, texts, speed = 100, pause = 2000) {
@@ -22,7 +55,7 @@
                 this.isDeleting = false;
                 this.type();
             }
-
+            
             type() {
                 const currentText = this.texts[this.textIndex];
                 
@@ -33,13 +66,13 @@
                     this.element.textContent = currentText.substring(0, this.charIndex + 1);
                     this.charIndex++;
                 }
-
+                
                 let typeSpeed = this.speed;
-
+                
                 if (this.isDeleting) {
                     typeSpeed /= 2;
                 }
-
+                
                 if (!this.isDeleting && this.charIndex === currentText.length) {
                     typeSpeed = this.pause;
                     this.isDeleting = true;
@@ -48,11 +81,11 @@
                     this.textIndex = (this.textIndex + 1) % this.texts.length;
                     typeSpeed = 500;
                 }
-
+                
                 setTimeout(() => this.type(), typeSpeed);
             }
         }
-
+        
         // Initialize typing animation
         document.addEventListener('DOMContentLoaded', () => {
             const typingText = document.getElementById('typing-text');
@@ -65,7 +98,7 @@
             ];
             
             new TypeWriter(typingText, texts, 100, 2000);
-
+            
             // Animate skill bars on scroll
             const animateSkillBars = () => {
                 const skillBars = document.querySelectorAll('.skill-level');
@@ -74,13 +107,13 @@
                     bar.style.width = `${width}%`;
                 });
             };
-
+            
             // Intersection Observer for animations
             const observerOptions = {
                 threshold: 0.2,
                 rootMargin: '0px 0px -100px 0px'
             };
-
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -92,7 +125,7 @@
                     }
                 });
             }, observerOptions);
-
+            
             // Observe sections
             document.querySelectorAll('section').forEach(section => {
                 section.style.opacity = 0;
@@ -100,7 +133,7 @@
                 section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
                 observer.observe(section);
             });
-
+            
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -117,11 +150,11 @@
                     }
                 });
             });
-
+            
             // Sticky navigation
             const navbar = document.getElementById('navbar');
             const backToTop = document.getElementById('backToTop');
-
+            
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 100) {
                     navbar.classList.add('scrolled');
@@ -130,11 +163,11 @@
                     navbar.classList.remove('scrolled');
                     backToTop.classList.remove('visible');
                 }
-
+                
                 // Update active nav link
                 const sections = document.querySelectorAll('section');
                 const navLinks = document.querySelectorAll('.nav-link');
-
+                
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
@@ -143,7 +176,7 @@
                         current = section.getAttribute('id');
                     }
                 });
-
+                
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${current}`) {
@@ -151,11 +184,11 @@
                     }
                 });
             });
-
+            
             // Mobile menu toggle
             const hamburger = document.getElementById('hamburger');
             const navMenu = document.getElementById('nav-menu');
-
+            
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
@@ -167,7 +200,7 @@
                     document.body.style.overflow = '';
                 }
             });
-
+            
             // Close mobile menu when clicking a link
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
@@ -176,11 +209,11 @@
                     document.body.style.overflow = '';
                 });
             });
-
+            
             // Resume tabs
             const resumeTabs = document.querySelectorAll('.resume-tab');
             const tabPanes = document.querySelectorAll('.tab-pane');
-
+            
             resumeTabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     const tabId = tab.getAttribute('data-tab');
@@ -199,39 +232,39 @@
                     }
                 });
             });
-
+            
             // Testimonial slider
             const testimonialTrack = document.getElementById('testimonialTrack');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const dots = document.querySelectorAll('.slider-dot');
             let currentSlide = 0;
-
+            
             // Create testimonial slides
             const testimonials = [
                 {
                     name: "Sarah Johnson",
                     role: "CTO, TechCorp Solutions",
-                    text: "Alex transformed our entire digital infrastructure. His technical expertise and leadership skills are exceptional. The project was delivered ahead of schedule and exceeded all our expectations. We saw a 40% improvement in performance metrics.",
+                    text: "HakSimpleDev transformed our entire digital infrastructure. His technical expertise and leadership skills are exceptional. The project was delivered ahead of schedule and exceeded all our expectations. We saw a 40% improvement in performance metrics.",
                     image: "https://images.unsplash.com/photo-1494790108755-2616b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
                     rating: 5
                 },
                 {
                     name: "Michael Chen",
                     role: "CEO, InnovateDigital",
-                    text: "Working with Alex was a game-changer for our business. He not only delivered exceptional code but also provided strategic insights that improved our entire digital strategy. The ROI from his work has been phenomenal.",
+                    text: "Working with HakSimpleDev was a game-changer for our business. He not only delivered exceptional code but also provided strategic insights that improved our entire digital strategy. The ROI from his work has been phenomenal.",
                     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                     rating: 5
                 },
                 {
                     name: "Emma Rodriguez",
                     role: "Product Manager, TechStart",
-                    text: "Alex's attention to detail and problem-solving skills are unmatched. He took our complex requirements and delivered a solution that was both elegant and efficient. His communication throughout the project was outstanding.",
+                    text: "HakSimpleDev's attention to detail and problem-solving skills are unmatched. He took our complex requirements and delivered a solution that was both elegant and efficient. His communication throughout the project was outstanding.",
                     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80",
                     rating: 5
                 }
             ];
-
+            
             // Initialize slider with testimonials
             function initializeSlider() {
                 testimonialTrack.innerHTML = '';
@@ -257,7 +290,7 @@
                     testimonialTrack.appendChild(slide);
                 });
             }
-
+            
             function updateSlider() {
                 testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
                 
@@ -265,52 +298,52 @@
                     dot.classList.toggle('active', index === currentSlide);
                 });
             }
-
+            
             prevBtn.addEventListener('click', () => {
                 currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
                 updateSlider();
             });
-
+            
             nextBtn.addEventListener('click', () => {
                 currentSlide = (currentSlide + 1) % testimonials.length;
                 updateSlider();
             });
-
+            
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     currentSlide = index;
                     updateSlider();
                 });
             });
-
+            
             // Auto-rotate testimonials
             let slideInterval = setInterval(() => {
                 currentSlide = (currentSlide + 1) % testimonials.length;
                 updateSlider();
             }, 5000);
-
+            
             // Pause auto-rotation on hover
             const sliderContainer = document.querySelector('.testimonial-slider');
             sliderContainer.addEventListener('mouseenter', () => {
                 clearInterval(slideInterval);
             });
-
+            
             sliderContainer.addEventListener('mouseleave', () => {
                 slideInterval = setInterval(() => {
                     currentSlide = (currentSlide + 1) % testimonials.length;
                     updateSlider();
                 }, 5000);
             });
-
+            
             // Initialize slider
             initializeSlider();
-
+            
             // Telegram Bot Integration for Contact Form
             const contactForm = document.getElementById('contactForm');
             const formMessage = document.getElementById('formMessage');
             const submitText = document.getElementById('submitText');
             const submitLoading = document.getElementById('submitLoading');
-
+            
             // Function to send message to Telegram
             async function sendToTelegram(formData) {
                 const message = `
@@ -325,7 +358,7 @@ ${formData.message}
 📱 *Submitted on:* ${new Date().toLocaleString()}
 🌐 *From:* ${window.location.href}
                 `;
-
+                
                 try {
                     const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                         method: 'POST',
@@ -339,7 +372,7 @@ ${formData.message}
                             disable_web_page_preview: true
                         })
                     });
-
+                    
                     const data = await response.json();
                     return data.ok;
                 } catch (error) {
@@ -347,7 +380,7 @@ ${formData.message}
                     return false;
                 }
             }
-
+            
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 
@@ -378,7 +411,7 @@ ${formData.message}
                 const telegramSuccess = await sendToTelegram(formData);
                 
                 if (telegramSuccess) {
-                    showFormMessage('✅ Message sent successfully! I\'ll get back to you within 24 hours. Check your email for confirmation.', 'success');
+                    showFormMessage('✅ Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
                     contactForm.reset();
                     
                     // Also send confirmation email (simulated)
@@ -386,15 +419,18 @@ ${formData.message}
                         showFormMessage('📧 A confirmation email has been sent to your inbox.', 'info');
                     }, 2000);
                 } else {
-                    showFormMessage('⚠️ Message could not be sent. Please try again or email me directly at hello@alexcarter.dev', 'error');
+                    showFormMessage('⚠️ Message could not be sent. Please try again or email me directly at hello@haksimple.dev', 'error');
                 }
                 
                 // Reset button state
                 submitText.style.display = 'inline';
                 submitLoading.style.display = 'none';
             });
-
+            
             function showFormMessage(text, type) {
+                const formMessage = document.getElementById('formMessage');
+                if (!formMessage) return;
+                
                 formMessage.textContent = text;
                 formMessage.className = 'form-message';
                 formMessage.classList.add(type);
@@ -414,12 +450,12 @@ ${formData.message}
                     }, 5000);
                 }
             }
-
+            
             function validateEmail(email) {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return re.test(email);
             }
-
+            
             // Initialize animations
             animateSkillBars();
             
@@ -475,16 +511,5 @@ ${formData.message}
                     }, 600);
                 });
             });
-            
-            // Add CSS for ripple animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes ripple {
-                    to {
-                        transform: scale(4);
-                        opacity: 0;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
         });
+
