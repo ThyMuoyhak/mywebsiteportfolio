@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logo/cat1.jpg">
+    <title>HakSimpleDev | Senior Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>AC</span>
+                <div class="logo-dot"></div>
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a style="color: white;" href="https://t.me/thymuoyhak" target="_blank" class="nav-link nav-cta">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Alex Carter</h1>
+                <div class="typing-container">
+                    <h2 id="typing-text"></h2>
+                </div>
+                <p class="hero-tagline">
+                    Senior Full-Stack Developer & Digital Solutions Architect with 8+ years of experience building scalable web applications and leading tech teams. Passionate about creating elegant solutions to complex problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">
+                        Get In Touch
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </a>
+                    <a href="#resume" class="btn btn-outline">
+                        View My Work
+                        <i class="fas fa-briefcase btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dot"></div>
+                        <div class="window-dot"></div>
+                        <div class="window-dot"></div>
+                    </div>
+                    <div class="code-line"><span class="keyword">class</span> <span class="function">Developer</span> {</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="keyword">constructor</span>() {</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">name</span> = <span class="string">"Alex Carter"</span>;</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">role</span> = <span class="string">"Full-Stack Developer"</span>;</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">techStack</span> = [</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"TypeScript"</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"AWS"</span>, <span class="string">"Docker"</span>, <span class="string">"MongoDB"</span></div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;];</div>
+                    <div class="code-line">&nbsp;&nbsp;}</div>
+                    <div class="code-line"></div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="function">buildProject</span>() {</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"🚀 Amazing digital experience"</span>;</div>
+                    <div class="code-line">&nbsp;&nbsp;}</div>
+                    <div class="code-line">}</div>
+                    <div class="code-line comment">// Building the future, one line at a time</div>
+                </div>
+                
+                <div class="floating-element">
+                    <h4><i class="fas fa-code"></i> Frontend</h4>
+                    <p>React, Vue, Next.js, TypeScript</p>
+                </div>
+                
+                <div class="floating-element">
+                    <h4><i class="fas fa-server"></i> Backend</h4>
+                    <p>Node.js, Python, AWS, Docker</p>
+                </div>
+                
+                <div class="floating-element">
+                    <h4><i class="fas fa-palette"></i> Design</h4>
+                    <p>Figma, Tailwind, Framer Motion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="profile-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Alex Carter" class="profile-image">
+                    <h3>Alex Carter</h3>
+                    <p>Senior Full-Stack Developer</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@alexcarter.dev</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (415) 555-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open to Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <h3>Crafting Digital Experiences</h3>
+                    <p>With over 8 years in the tech industry, I've dedicated my career to building exceptional digital products that solve real-world problems. My journey began in computer science and evolved through various roles from junior developer to technical lead.</p>
+                    
+                    <p>I specialize in creating scalable web applications using modern technologies like React, Node.js, and cloud platforms. My approach combines technical excellence with user-centered design to deliver products that are both powerful and intuitive.</p>
+                    
+                    <p>Throughout my career, I've had the privilege of working with startups and Fortune 500 companies alike, contributing to projects that serve millions of users worldwide. I'm passionate about mentoring junior developers and contributing to open-source communities.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>8+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2>My Resume</h2>
+            
+            <div class="resume-tabs" id="resumeTabs">
+                <button class="resume-tab active" data-tab="experience">Experience</button>
+                <button class="resume-tab" data-tab="education">Education</button>
+                <button class="resume-tab" data-tab="skills">Skills</button>
+                <button class="resume-tab" data-tab="certifications">Certifications</button>
+            </div>
+            
+            <div class="resume-content">
+                <div class="tab-pane active" id="experience">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2021<br>Present</div>
+                            <div class="timeline-content">
+                                <h3>Senior Full-Stack Developer</h3>
+                                <h4>TechSolutions Inc. • San Francisco, CA</h4>
+                                <p>Lead a team of 8 developers in building enterprise-level SaaS applications. Implemented microservices architecture that improved scalability by 300% and reduced server costs by 40%.</p>
+                                <div class="skill-meter">
+                                    <div class="skill-info">
+                                        <span>Project Management</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" data-width="95"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2018<br>2021</div>
+                            <div class="timeline-content">
+                                <h3>Full-Stack Developer</h3>
+                                <h4>Digital Innovations LLC • New York, NY</h4>
+                                <p>Developed and maintained multiple client websites and applications. Reduced page load times by 60% through performance optimization and implemented CI/CD pipelines.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2016<br>2018</div>
+                            <div class="timeline-content">
+                                <h3>Frontend Developer</h3>
+                                <h4>WebCraft Studio • Boston, MA</h4>
+                                <p>Built responsive web applications using modern JavaScript frameworks. Collaborated with design teams to implement pixel-perfect UI components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="skills">
+                    <div class="skills-grid">
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>JavaScript / TypeScript</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-width="98"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>React & Next.js</span>
+                                <span>96%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-width="96"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>Node.js & Express</span>
+                                <span>94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-width="94"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>AWS & DevOps</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>UI/UX Design</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Testimonials will be loaded via JavaScript -->
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <span class="slider-dot active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Call Me</h4>
+                            <p>+1 (415) 555-7890</p>
+                            <small>Mon-Fri, 9AM-6PM PST</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p>hello@alexcarter.dev</p>
+                            <small>Response within 24 hours</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>San Francisco, California</p>
+                            <small>Available for remote work</small>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://dribbble.com" target="_blank" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Project Inquiry" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" class="form-control" placeholder="Tell me about your project, timeline, and budget..." required rows="5"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <span id="submitText">Send Message</span>
+                            <span id="submitLoading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                            <i class="fas fa-paper-plane btn-icon"></i>
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <span>AC</span>
+                        <div class="logo-dot"></div>
+                    </a>
+                    <p>Building exceptional digital experiences through innovative solutions and cutting-edge technology. Let's create something amazing together.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">DevOps</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Carter. All rights reserved. | Designed with ❤️ and code</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
