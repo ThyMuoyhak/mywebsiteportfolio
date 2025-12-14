@@ -8,20 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Animated Background Elements -->
+    <div class="particles" id="particles"></div>
+    <div class="gradient-line"></div>
+    <div class="gradient-line"></div>
+    <div class="gradient-line"></div>
+    
     <!-- Loading Screen -->
     <div class="loading" id="loading">
         <div class="spinner"></div>
     </div>
-
+    
     <!-- Navigation -->
     <nav id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span>AC</span>
+                <span>HSD</span>
                 <div class="logo-dot"></div>
             </a>
             
@@ -37,21 +43,21 @@
                 <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a style="color: white;" href="https://t.me/thymuoyhak" target="_blank" class="nav-link nav-cta">Hire Me</a></li>
+                <li><a href="https://t.me/thymuoyhak" target="_blank" class="nav-link nav-cta">Hire Me</a></li>
             </ul>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1>Alex Carter</h1>
+                <h1>HakSimpleDev</h1>
                 <div class="typing-container">
                     <h2 id="typing-text"></h2>
                 </div>
                 <p class="hero-tagline">
-                    Senior Full-Stack Developer & Digital Solutions Architect with 8+ years of experience building scalable web applications and leading tech teams. Passionate about creating elegant solutions to complex problems.
+                    Senior Full-Stack Developer & Digital Architect with 8+ years of experience building cutting-edge web applications and leading tech innovation. Passionate about creating elegant solutions that transform businesses.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn">
@@ -72,21 +78,21 @@
                         <div class="window-dot"></div>
                         <div class="window-dot"></div>
                     </div>
-                    <div class="code-line"><span class="keyword">class</span> <span class="function">Developer</span> {</div>
+                    <div class="code-line"><span class="keyword">class</span> <span class="function">HakSimpleDev</span> {</div>
                     <div class="code-line">&nbsp;&nbsp;<span class="keyword">constructor</span>() {</div>
-                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">name</span> = <span class="string">"Alex Carter"</span>;</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">name</span> = <span class="string">"HakSimpleDev"</span>;</div>
                     <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">role</span> = <span class="string">"Full-Stack Developer"</span>;</div>
                     <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.<span class="string">techStack</span> = [</div>
-                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"TypeScript"</span>,</div>
-                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"AWS"</span>, <span class="string">"Docker"</span>, <span class="string">"MongoDB"</span></div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"React"</span>, <span class="string">"Vue.js"</span>, <span class="string">"Next.js"</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Node.js"</span>, <span class="string">"TypeScript"</span>, <span class="string">"GraphQL"</span></div>
                     <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;];</div>
                     <div class="code-line">&nbsp;&nbsp;}</div>
                     <div class="code-line"></div>
                     <div class="code-line">&nbsp;&nbsp;<span class="function">buildProject</span>() {</div>
-                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"🚀 Amazing digital experience"</span>;</div>
+                    <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"🚀 Next-Level Digital Experience"</span>;</div>
                     <div class="code-line">&nbsp;&nbsp;}</div>
                     <div class="code-line">}</div>
-                    <div class="code-line comment">// Building the future, one line at a time</div>
+                    <div class="code-line comment">// Building the future, one pixel at a time</div>
                 </div>
                 
                 <div class="floating-element">
@@ -106,15 +112,15 @@
             </div>
         </div>
     </section>
-
+    
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-container">
                 <div class="profile-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Alex Carter" class="profile-image">
-                    <h3>Alex Carter</h3>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="HakSimpleDev" class="profile-image">
+                    <h3>HakSimpleDev</h3>
                     <p>Senior Full-Stack Developer</p>
                     
                     <div class="info-grid">
@@ -124,7 +130,7 @@
                             </div>
                             <div>
                                 <h4>Location</h4>
-                                <p>San Francisco, CA</p>
+                                <p>Remote Worldwide</p>
                             </div>
                         </div>
                         
@@ -134,7 +140,7 @@
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <p>hello@alexcarter.dev</p>
+                                <p>hello@haksimple.dev</p>
                             </div>
                         </div>
                         
@@ -144,7 +150,7 @@
                             </div>
                             <div>
                                 <h4>Phone</h4>
-                                <p>+1 (415) 555-7890</p>
+                                <p>+1 (555) 123-4567</p>
                             </div>
                         </div>
                         
@@ -154,7 +160,7 @@
                             </div>
                             <div>
                                 <h4>Availability</h4>
-                                <p>Open to Projects</p>
+                                <p>Open for Projects</p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +182,7 @@
                 </div>
                 
                 <div class="about-content">
-                    <h3>Crafting Digital Experiences</h3>
+                    <h3>Crafting Digital Excellence</h3>
                     <p>With over 8 years in the tech industry, I've dedicated my career to building exceptional digital products that solve real-world problems. My journey began in computer science and evolved through various roles from junior developer to technical lead.</p>
                     
                     <p>I specialize in creating scalable web applications using modern technologies like React, Node.js, and cloud platforms. My approach combines technical excellence with user-centered design to deliver products that are both powerful and intuitive.</p>
@@ -201,7 +207,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Resume Section -->
     <section id="resume" class="resume">
         <div class="container">
@@ -311,7 +317,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
@@ -339,7 +345,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -353,7 +359,7 @@
                         </div>
                         <div>
                             <h4>Call Me</h4>
-                            <p>+1 (415) 555-7890</p>
+                            <p>+1 (555) 123-4567</p>
                             <small>Mon-Fri, 9AM-6PM PST</small>
                         </div>
                     </div>
@@ -364,7 +370,7 @@
                         </div>
                         <div>
                             <h4>Email Me</h4>
-                            <p>hello@alexcarter.dev</p>
+                            <p>hello@haksimple.dev</p>
                             <small>Response within 24 hours</small>
                         </div>
                     </div>
@@ -375,7 +381,7 @@
                         </div>
                         <div>
                             <h4>Location</h4>
-                            <p>San Francisco, California</p>
+                            <p>Remote Worldwide</p>
                             <small>Available for remote work</small>
                         </div>
                     </div>
@@ -432,14 +438,14 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
                     <a href="#" class="footer-logo">
-                        <span>AC</span>
+                        <span>HSD</span>
                         <div class="logo-dot"></div>
                     </a>
                     <p>Building exceptional digital experiences through innovative solutions and cutting-edge technology. Let's create something amazing together.</p>
@@ -469,16 +475,16 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Alex Carter. All rights reserved. | Designed with ❤️ and code</p>
+                <p>&copy; 2024 HakSimpleDev. All rights reserved. | Designed with ❤️ and code</p>
             </div>
         </div>
     </footer>
-
+    
     <!-- Back to Top -->
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </a>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
